@@ -10,15 +10,6 @@ inputs:
 outputs:
   sum:
     description: "Sum of the numbers"
-    value: ${{ steps.sum_step.outputs.result }}
 runs:
-  using: "composite"
-  steps:
-    - name: Install dependencies
-      run: npm install
-      shell: bash
-
-    - name: Run sum script
-      id: sum_step
-      run: node sum.js
-      shell: bash
+  using: "node16"
+  main: "dist/index.js"  
