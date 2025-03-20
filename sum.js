@@ -5,7 +5,7 @@ try {
     const num2 = parseInt(core.getInput("num2"));
 
     if (isNaN(num1) || isNaN(num2)) {
-        throw new Error("Invalid inputs: Please provide two numbers.");
+        throw new Error("Invalid inputs: Please provide two numbers");
     }
 
     const result = num1 + num2;
