@@ -1,7 +1,5 @@
 name: "Sum Action"
-description: "Calculates the sum of two numbers"
-author: "Sudarshan"
-
+description: "Adds two numbers"
 inputs:
   num1:
     description: "First number"
@@ -9,11 +7,17 @@ inputs:
   num2:
     description: "Second number"
     required: true
-
 outputs:
   sum:
-    description: "The sum of the two numbers"
-
+    description: "Sum of the numbers"
+    value: ${{ steps.sum.outputs.result }}
 runs:
-  using: "node16"
-  main: "dist/index.js"  
+  using: "composite"
+  steps:
+    - name: Install dependencies
+      run: npm install
+      shell: bash
+
+    - name: Run sum script
+      run: node sum.js
+      shell: bash
