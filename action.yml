@@ -10,7 +10,6 @@ inputs:
 outputs:
   sum:
     description: "Sum of the numbers"
-    value: ${{ steps.sum.outputs.result }}
 runs:
   using: "node16"
   main: "sum.js"
