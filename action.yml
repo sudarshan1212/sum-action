@@ -16,4 +16,4 @@ outputs:
 
 runs:
   using: "node16"
-  main: "sum.js"
+  main: "dist/index.js"  
