@@ -1,0 +1,19 @@
+name: "Sum Action"
+description: "Calculates the sum of two numbers"
+author: "Sudarshan"
+
+inputs:
+  num1:
+    description: "First number"
+    required: true
+  num2:
+    description: "Second number"
+    required: true
+
+outputs:
+  sum:
+    description: "The sum of the two numbers"
+
+runs:
+  using: "node16"
+  main: "sum.js"

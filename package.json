@@ -1,0 +1,9 @@
+{
+    "name": "sum-action",
+    "version": "1.0.0",
+    "description": "GitHub Action to calculate sum of two numbers",
+    "main": "sum.js",
+    "dependencies": {
+        "@actions/core": "^1.10.0"
+    }
+}
